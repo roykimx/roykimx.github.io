@@ -1,0 +1,68 @@
+.section {
+  margin-bottom: 44px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.section hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 18px;
+}
+
+.section p {
+  margin: 0 0 14px;
+  color: var(--text);
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Projects */
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.projectName {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.projectStack {
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
+  margin-left: 2px;
+}
+
+.project p {
+  margin-top: 4px;
+}
+
+/* Skills */
+
+.skillsRow {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.skillsRow:last-child {
+  margin-bottom: 0;
+}
+
+.skillsRow strong {
+  font-weight: 600;
+}
