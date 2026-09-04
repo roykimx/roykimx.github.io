@@ -66,3 +66,9 @@
 .skillsRow strong {
   font-weight: 600;
 }
+
+/* Empty state */
+
+.empty {
+  color: var(--text-tertiary);
+}

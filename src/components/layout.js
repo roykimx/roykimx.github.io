@@ -1,7 +1,8 @@
 import * as React from "react"
 
-import Header from "./header"
+import Sidebar from "./sidebar"
 import useTheme from "../hooks/useTheme"
+import { IconMoon, IconSun } from "./icons"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -9,9 +10,18 @@ const Layout = ({ children }) => {
 
   return (
     <div className="wrap">
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <hr className="hero-divider" />
-      <main>{children}</main>
+      <Sidebar />
+      <main>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle dark mode"
+        >
+          {theme === "dark" ? <IconSun /> : <IconMoon />}
+        </button>
+        {children}
+      </main>
       <footer>&copy; {new Date().getFullYear()} Roy Kim</footer>
     </div>
   )

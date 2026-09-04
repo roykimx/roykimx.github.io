@@ -1,4 +1,4 @@
-.hero {
+.sidebar {
   text-align: left;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .name {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 6px;
   letter-spacing: -0.01em;
@@ -28,52 +28,37 @@
 
 .subtitleLine {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin: 2px 0;
-  max-width: none;
 }
 
 .nav {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: 22px 0 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 22px 0 20px;
 }
 
 .nav a {
-  color: var(--accent);
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 .nav a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
+  color: var(--accent);
 }
 
-.themeToggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  line-height: 0;
-  margin-left: auto;
-}
-
-.themeToggle:hover {
-  color: var(--text);
+.navActive {
+  color: var(--accent) !important;
 }
 
 .socialRow {
   display: flex;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 .socialRow a {
@@ -84,6 +69,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  margin-left: -6px;
   transition: color 0.15s ease, background 0.15s ease;
 }
 

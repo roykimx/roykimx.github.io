@@ -1,51 +1,32 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
-import * as styles from "./header.module.css"
-import {
-  IconUser,
-  IconMail,
-  IconLinkedIn,
-  IconDownload,
-  IconMoon,
-  IconSun,
-} from "./icons"
+import * as styles from "./sidebar.module.css"
+import { IconUser, IconMail, IconLinkedIn, IconDownload } from "./icons"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { to: "/", label: "About" },
+  { to: "/projects/", label: "Projects" },
+  { to: "/posts/", label: "Posts" },
 ]
 
-const Header = ({ theme, toggleTheme }) => (
-  <header className={styles.hero}>
+const Sidebar = () => (
+  <aside className={styles.sidebar}>
     <div className={styles.avatar} aria-hidden="true">
       <IconUser className={styles.avatarIcon} />
     </div>
 
     <h1 className={styles.name}>Roy Kim</h1>
-    <p className={styles.subtitleLine}>Backend Software Developer</p>
+    <p className={styles.subtitleLine}>Software Engineer</p>
     <p className={styles.subtitleLine}>Western University &rsquo;22</p>
     <p className={styles.subtitleLine}>Montreal, QC</p>
 
     <nav className={styles.nav} aria-label="Sections">
       {navLinks.map(link => (
-        <a key={link.href} href={link.href}>
+        <Link key={link.to} to={link.to} activeClassName={styles.navActive}>
           {link.label}
-        </a>
+        </Link>
       ))}
-      <button
-        type="button"
-        className={styles.themeToggle}
-        onClick={toggleTheme}
-        aria-label="Toggle dark mode"
-      >
-        {theme === "dark" ? (
-          <IconSun className={styles.icon} />
-        ) : (
-          <IconMoon className={styles.icon} />
-        )}
-      </button>
     </nav>
 
     <div className={styles.socialRow}>
@@ -71,7 +52,7 @@ const Header = ({ theme, toggleTheme }) => (
         <IconDownload className={styles.icon} />
       </a>
     </div>
-  </header>
+  </aside>
 )
 
-export default Header
+export default Sidebar
