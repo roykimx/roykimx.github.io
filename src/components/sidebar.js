@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import * as styles from "./sidebar.module.css"
-import { IconUser, IconMail, IconLinkedIn, IconDownload } from "./icons"
+import { IconMail, IconLinkedIn, IconDownload } from "./icons"
 
 const navLinks = [
   { to: "/", label: "About" },
@@ -12,8 +13,16 @@ const navLinks = [
 
 const Sidebar = () => (
   <aside className={styles.sidebar}>
-    <div className={styles.avatar} aria-hidden="true">
-      <IconUser className={styles.avatarIcon} />
+    <div className={styles.avatar}>
+      <StaticImage
+        src="../images/profile-pic.jpeg"
+        alt="Roy Kim"
+        className={styles.avatarImage}
+        width={84}
+        height={84}
+        quality={90}
+        placeholder="blurred"
+      />
     </div>
 
     <h1 className={styles.name}>Roy Kim</h1>
